@@ -66,7 +66,7 @@ public class UserAddressDao extends ConnectionDao {
             userAddress.setAddress2(rs.getString("ADDRESS2"));
             userAddress.setCity(rs.getString("CITY"));
             userAddress.setState(rs.getString("STATE"));
-            userAddress.setCounty(rs.getString("COUNTRY"));
+            userAddress.setCountry(rs.getString("COUNTRY"));
             userAddress.setPinCode(rs.getString("PIN_CODE"));
             return userAddress;
         }

@@ -7,7 +7,7 @@ public class UserAddress {
     private String address2;
     private String city;
     private String state;
-    private String county;
+    private String country;
     private String pinCode;
     private String userName;
 
@@ -51,12 +51,12 @@ public class UserAddress {
         this.state = state;
     }
 
-    public String getCounty() {
-        return county;
+    public String getCountry() {
+        return country;
     }
 
-    public void setCounty(String county) {
-        this.county = county;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public String getPinCode() {
@@ -83,7 +83,7 @@ public class UserAddress {
                 ", address2='" + address2 + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
-                ", county='" + county + '\'' +
+                ", country='" + country + '\'' +
                 ", pinCode='" + pinCode + '\'' +
                 ", userName='" + userName + '\'' +
                 '}';

@@ -1,10 +1,7 @@
 package com.psc.eStore.dao;
 
 import com.psc.eStore.domain.Product;
-import com.psc.eStore.domain.User;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
-import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

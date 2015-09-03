@@ -1,9 +1,7 @@
 package com.psc.eStore.service;
 
 import com.psc.eStore.domain.Product;
-import com.psc.eStore.domain.User;
 import com.psc.eStore.manager.ProductManager;
-import com.psc.eStore.manager.UserManager;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;

@@ -40,7 +40,7 @@ public class UserUtil {
             addressJSON.put("address2", address.getAddress2());
             addressJSON.put("city", address.getCity());
             addressJSON.put("state", address.getState());
-            addressJSON.put("country", address.getCounty());
+            addressJSON.put("country", address.getCountry());
             addressJSON.put("pin_code", address.getPinCode());
             addressesJSON.add(addressJSON);
         }

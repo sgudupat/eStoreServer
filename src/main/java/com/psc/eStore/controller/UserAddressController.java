@@ -42,7 +42,7 @@ public class UserAddressController {
         userAddress.setAddress2(request.getParameter("address2"));
         userAddress.setCity(request.getParameter("city"));
         userAddress.setState(request.getParameter("state"));
-        userAddress.setCounty(request.getParameter("country"));
+        userAddress.setCountry(request.getParameter("country"));
         userAddress.setPinCode(request.getParameter("pinCode"));
         userAddress.setUserName(request.getParameter("username"));
 
@@ -65,7 +65,7 @@ public class UserAddressController {
         userAddress.setAddress2(request.getParameter("address2"));
         userAddress.setCity(request.getParameter("city"));
         userAddress.setState(request.getParameter("state"));
-        userAddress.setCounty(request.getParameter("country"));
+        userAddress.setCountry(request.getParameter("country"));
         userAddress.setPinCode(request.getParameter("pinCode"));
         userAddress.setUserName(request.getParameter("username"));
         System.out.println("userAddress:" + userAddress);

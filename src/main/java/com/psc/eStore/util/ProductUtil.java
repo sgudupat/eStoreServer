@@ -1,9 +1,6 @@
 package com.psc.eStore.util;
 
 import com.psc.eStore.domain.Product;
-import com.psc.eStore.domain.User;
-import com.psc.eStore.domain.UserAddress;
-import org.jasypt.util.password.BasicPasswordEncryptor;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
