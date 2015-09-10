@@ -108,4 +108,33 @@ public class UserController {
             return "fail";
         }
     }
+
+    @RequestMapping("/getUserByKeyValue")
+    @ResponseBody
+    public String getUserByKeyValue(HttpServletRequest request, HttpServletResponse response) {
+        System.out.println("in getUserByKeyValue");
+        String keyValue = request.getParameter("keyValue");
+        try {
+            User dbUser = userService.getUserByKeyValue(keyValue);
+            return UserUtil.toJSONUser(dbUser);
+        } catch (Exception e) {
+            return "fail";
+        }
+    }
+
+    @RequestMapping("/updatePassword")
+    @ResponseBody
+    public String updatePassword(HttpServletRequest request, HttpServletResponse response) {
+        System.out.println("in updatePassword");
+        User user = new User();
+        user.setUserName(request.getParameter("username"));
+        user.setPassword(UserUtil.encryptPassword(request.getParameter("password")));
+        try {
+            User dbUser = userService.updatePassword(user);
+            return UserUtil.toJSONUser(dbUser);
+        } catch (Exception e) {
+            return "fail";
+        }
+    }
+
 }

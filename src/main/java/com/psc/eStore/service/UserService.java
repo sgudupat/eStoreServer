@@ -17,6 +17,14 @@ public class UserService {
         return userManager.getUser(user);
     }
 
+    public User getUserByKeyValue(String keyValue) throws Exception {
+        return userManager.getUserByKeyValue(keyValue);
+    }
+
+    public User updatePassword(User user) throws Exception {
+        return userManager.updatePassword(user);
+    }
+
     public void updatePasswordKey(User user) throws Exception {
         userManager.updatePasswordKey(user);
     }

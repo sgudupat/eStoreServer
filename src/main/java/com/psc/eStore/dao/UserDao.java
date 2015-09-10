@@ -32,9 +32,25 @@ public class UserDao extends ConnectionDao {
         }
     }
 
+    public User updatePassword(User user) throws Exception {
+        String updateStmt = "UPDATE users SET password = ? WHERE user_name = ? ";
+        try {
+            this.getJdbcTemplate().update(updateStmt, new Object[]{user.getPassword(), user.getUserName()});
+            return getUser(user);
+        } catch (Exception ex) {
+            System.out.println("failed to update for user_name: " + user + ex.getMessage());
+            throw ex;
+        }
+    }
+
     public User getUser(User user) {
         String selectStmt = "SELECT user_name, password, mobile, email_address, registration_id FROM users WHERE user_name = ?";
         return this.getJdbcTemplate().queryForObject(selectStmt, new Object[]{user.getUserName()}, new UserRowMapper());
+    }
+
+    public User getUserByKeyValue(String keyValue) {
+        String selectStmt = "SELECT user_name, password, mobile, email_address, registration_id FROM users WHERE password_key_value = ?";
+        return this.getJdbcTemplate().queryForObject(selectStmt, new Object[]{keyValue}, new UserRowMapper());
     }
 
     private static final class UserRowMapper implements RowMapper<User> {

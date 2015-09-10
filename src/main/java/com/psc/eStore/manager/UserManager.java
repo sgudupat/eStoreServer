@@ -17,6 +17,14 @@ public class UserManager {
         return userDao.getUser(user);
     }
 
+    public User updatePassword(User user) throws Exception {
+        return userDao.updatePassword(user);
+    }
+
+    public User getUserByKeyValue(String keyValue) throws Exception {
+        return userDao.getUserByKeyValue(keyValue);
+    }
+
     public void updatePasswordKey(User user) throws Exception {
         userDao.updatePasswordKey(user);
     }
