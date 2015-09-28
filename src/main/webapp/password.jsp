@@ -10,7 +10,7 @@
 <script type='text/javascript'>
     /* attach a submit handler to the form */
     $("#pwd").submit(function(event) {
-
+    	alert("inside submit fucntion");
       /* stop form from submitting normally */
       event.preventDefault();
 
@@ -24,15 +24,15 @@
       /* Alerts the results */
       posting.done(function( data ) {
 	  alert(data);
-        alert('success');
+        alert("success");
       });
     });
 </script>
 <%
 String key=request.getParameter("Key");
-String uName;
+String uName="";
 try{
-    URL oracle = new URL("/getUserByKeyValue?keyValue="+key);
+    URL oracle = new URL("http://52.76.83.72:8080/eStore/getUserByKeyValue?keyValue="+key);
     BufferedReader in = new BufferedReader(new InputStreamReader(oracle.openStream()));
 
     String inputLine;
