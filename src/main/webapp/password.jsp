@@ -46,8 +46,8 @@ try{
     	
     }
 %>
-<form id="pwd" action="update" method="POST">
-UserName: <input type="text" id="name" value=<%=uName%> name="name">
+<form id="pwd"  method="POST">
+UserName: <input type="text" id="name" value=<%=uName%> name="name"/>
 <br />
 New Password: <input type="text" name="password"  id="password"/>
 <br />
