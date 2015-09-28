@@ -15,7 +15,7 @@ try{
     while ((inputLine = in.readLine()) != null)
         out.println(inputLine);
 		request.setAttribute("name", inputLine);
-		response.sendRedirect("password.jsp?name="+inputLine);
+		response.sendRedirect("/password.jsp?name="+inputLine);
     in.close();
     }catch(Exception ex){}
 %>
