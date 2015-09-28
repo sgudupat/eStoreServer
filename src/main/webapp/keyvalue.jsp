@@ -15,9 +15,12 @@ try{
     while ((inputLine = in.readLine()) != null)
         out.println(inputLine);
 		request.setAttribute("name", inputLine);
-		response.sendRedirect("/password.jsp?name="+inputLine);
+		response.sendRedirect("http://52.76.83.72:8080/eStore/password.jsp?name="+inputLine);
     in.close();
-    }catch(Exception ex){}
+    }catch(Exception ex){
+    	out.prinltn("exception :"+ex);
+    	
+    }
 %>
 </body>
 </html>
