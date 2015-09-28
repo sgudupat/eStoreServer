@@ -1,3 +1,5 @@
+
+<%@ page import="java.sql.*,java.net.*,java.io.*,java.lang.*,java.util.*"%>
 <html>
 <head>
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -26,9 +28,26 @@
       });
     });
 </script>
-<%String key=request. getParameter("name");%>
+<%
+String key=request.getParameter("Key");
+String uName;
+try{
+    URL oracle = new URL("/getUserByKeyValue?keyValue="+key);
+    BufferedReader in = new BufferedReader(new InputStreamReader(oracle.openStream()));
+
+    String inputLine;
+    while ((inputLine = in.readLine()) != null)
+        out.println("user name:" + inputLine);
+    uName=inputLine;
+		
+    in.close();
+    }catch(Exception ex){
+    	out.prinltn("exception :"+ex);
+    	
+    }
+%>
 <form id="pwd" action="update" method="POST">
-UserName: <input type="text" id="name" value=<%request. getParameter("name");%> name="name">
+UserName: <input type="text" id="name" value=<%=uName%> name="name">
 <br />
 New Password: <input type="text" name="password"  id="password"/>
 <br />
