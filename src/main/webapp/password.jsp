@@ -42,7 +42,7 @@ try{
 		
     in.close();
     }catch(Exception ex){
-    	out.prinltn("exception :"+ex);
+    	out.println("exception :"+ex);
     	
     }
 %>
