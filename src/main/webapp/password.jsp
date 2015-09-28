@@ -3,8 +3,8 @@
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
 <body>
-    <jsp:include page="/latest_products.jsp" />
-<%String key=request. getParameter("name");/>
+  
+
 
 
 <script type='text/javascript'>
@@ -28,8 +28,9 @@
       });
     });
 </script>
+<%String key=request. getParameter("name");%>
 <form id="pwd" action="update" method="POST">
-UserName: <input type="text" id="name" value=<%request. getParameter("name")/> name="name">
+UserName: <input type="text" id="name" value=<%request. getParameter("name");%> name="name">
 <br />
 New Password: <input type="text" name="password"  id="password"/>
 <br />
