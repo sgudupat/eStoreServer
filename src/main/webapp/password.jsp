@@ -9,7 +9,7 @@
 
 <script type='text/javascript'>
     /* attach a submit handler to the form */
-    $("#pwd").submit(function(event) {
+    $("#submit").submit(function(event) {
     	alert("inside submit fucntion");
       /* stop form from submitting normally */
       event.preventDefault();
@@ -29,7 +29,8 @@
     });
 </script>
 <%
-String key=request.getParameter("Key");
+String key=request.getParameter("key");
+out.println("key value:" + key);
 String uName="";
 try{
     URL oracle = new URL("http://52.76.83.72:8080/eStore/getUserByKeyValue?keyValue="+key);
@@ -52,7 +53,7 @@ UserName: <input type="text" id="name" value=<%=uName%> name="name"/>
 New Password: <input type="text" name="password"  id="password"/>
 <br />
 Reenter Password: <input type="text" name="rpassword" id="rpassword" />
-<input type="submit" value="Submit" />
+<input type="submit" id="submit" value="Submit" />
 </form>
 </body>
 </html>
