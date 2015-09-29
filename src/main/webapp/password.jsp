@@ -3,11 +3,11 @@
 <html>
 <head>
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-</head>
-<body>
-
-
+  
 <script type='text/javascript'>
+
+$(document).ready(function() {
+
     /* attach a submit handler to the form */
     $("#submit").submit(function(event) {
     	alert("inside submit fucntion");
@@ -27,7 +27,12 @@
         alert("success");
       });
     });
+});
 </script>
+</head>
+<body>
+
+
 <%
 String key=request.getParameter("key");
 out.println("key value:" + key);
